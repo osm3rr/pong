@@ -1,5 +1,6 @@
 # 1. initialize pygame
 import pygame
+import random as rd
 pygame.init()
 
 # 2. colors variables
@@ -89,7 +90,7 @@ while not game_over:
         
         ball_x_coord = int( screen_width / 2 ) # we use int function to save as integer
         ball_y_coord = int( screen_height / 2 )
-        ball_speed_x *= -1
+        ball_speed_x *= rd.choice( [-1, 1] )
 
     # players and ball movement
     player_1_y_coord += player_1_y_speed
