@@ -18,7 +18,7 @@ player_height = 90
 
 # 11.1 Coordinates player 1
 player_1_x_coord = 50
-player_1_y_coord = 300 - ( player_height / 2 )
+player_1_y_coord = int( 300 - ( player_height / 2 ) ) # we use int function to save as integer
 player_1_y_speed = 0
 
 # 11.1 Coordinates player 2
@@ -33,11 +33,6 @@ ball_radius = 10
 
 ball_speed_x = 5
 ball_speed_y = 5
-
-# function section
-def ball_restart():
-    ball_x_coord = screen_width / 2
-    ball_y_coord = screen_height / 2
 
 # 4. create the windows
 screen = pygame.display.set_mode( screen_size )
@@ -58,17 +53,17 @@ while not game_over:
         if event.type == pygame.KEYDOWN:
             # 13.1 player 1
             if event.key == pygame.K_w:
-                player_1_y_speed = -20
+                player_1_y_speed = -10
 
             if event.key == pygame.K_s:
-                player_1_y_speed = 20
+                player_1_y_speed = 10
             
             # 13.2 player 2
             if event.key == pygame.K_UP:
-                player_2_y_speed = -20
+                player_2_y_speed = -10
 
             if event.key == pygame.K_DOWN:
-                player_2_y_speed = 20
+                player_2_y_speed = 10
         
         # when release the key
         if event.type == pygame.KEYUP:
@@ -91,9 +86,10 @@ while not game_over:
 
     # ball boundary: right or left
     if (ball_x_coord > screen_width) or (ball_x_coord < 0):
-        ball_speed_x *= -1
         
-          
+        ball_x_coord = int( screen_width / 2 ) # we use int function to save as integer
+        ball_y_coord = int( screen_height / 2 )
+        ball_speed_x *= -1
 
     # players and ball movement
     player_1_y_coord += player_1_y_speed
@@ -143,4 +139,3 @@ while not game_over:
     
     # 5. to refresh the screen
     clock.tick(60)
-#pygame.quit()
