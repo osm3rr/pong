@@ -82,7 +82,7 @@ while not game_over:
     if ball_y_coord > 590 or ball_y_coord < 10:
         ball_speed_y *= -1
 
-    # ball limit: right or left
+    # ball boundary: right or left
     if (ball_x_coord > 800) or (ball_x_coord < 0):
         ball_x_coord = 400
         ball_y_coord = 300
