@@ -1,4 +1,4 @@
-part 1: create the game loop
+part 1: create the windows and game loop
 from comment 1 to 8
 
 part 2: create the game elements
