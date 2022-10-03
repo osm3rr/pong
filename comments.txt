@@ -1,0 +1,13 @@
+part 1: create the game loop
+from comment 1 to 8
+
+part 2: create the game elements
+player 1
+plaer 2
+ball
+
+part 3: players and ball movement
+
+part 4: collisions
+
+
