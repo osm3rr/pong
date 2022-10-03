@@ -10,4 +10,6 @@ part 3: players and ball movement
 
 part 4: collisions
 
+part 5: add random movement when ball is reset
+
 
